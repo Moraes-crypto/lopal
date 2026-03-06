@@ -1,0 +1,21 @@
+EVOLUÇÃO DE POKEMON:
+--------------------
+<!Doctype html>
+<html>
+	<body>
+		<h2>O que o JavaScript pode fazer</h2>
+		<p>O JavaScript pode alterar atributos HTML</p>
+		<p>
+			Neste caso o JavaScript muda o valor do 
+			atributo src (source) de uma iamgem.
+		</p>
+
+		<button onclick="document.getElementById('minhaImagem').src=
+			'pokemon2.png'">EVOLUA!!</button>
+
+		<img id="minhaImagem" src="pokemon1.png" style="width:100px">
+
+		<button onclick="document.getElementById('minhaImagem').src=
+			'pokemon1.png'"> VOLTE AO NORMAL</button>
+	</body>
+</html>
