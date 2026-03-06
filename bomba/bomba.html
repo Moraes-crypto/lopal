@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+	<body>
+		<h2>O que o JavaScript pode fazer</h2>
+		<p>O JavaScript pode alterar atributos HTML</p>
+		<p>
+			Neste caso o JavaScript muda o valor do 
+			atributo src (source) de uma iamgem.
+		</p>
+
+		<button onclick="document.getElementById('minhaImagem').src=
+			'explosão.png'">NÃO APERTE!</button>
+
+		<img id="minhaImagem" src="bomba.png" style="width:400px">
+
+		<button onclick="document.getElementById('minhaImagem').src=
+			'bomba.png'">EU AVISEI</button>
+	</body>
+</html>
