@@ -14,3 +14,4 @@ async function lagarta(){
         console.clear();
     }     
 }
+lagarta();
