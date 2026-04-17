@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+body {
+  min-height: 100vh;
+}
+
+canvas#jogo {
+  display: block;
+  width: 800px;
+  height: 600px;
+  border: 6px solid rgba(255, 165, 0, 0.85);
+  box-shadow: 0 0 28px 10px rgb(255, 166, 0), 0 0 18px 
+4px rgb(255, 140, 0);
+  border-radius: 16px;
+}
