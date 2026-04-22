@@ -63,9 +63,9 @@ function mostrarAngulo(){
 
 function mostrarAltitude(){
     mostrarIndicador(
-    `Altitude: ${(canvas.height - moduloLunar.posicao.y - 0.5 * moduloLunar.altura).toFixed(0)}`,
-     400,
-     60
+        `Altitude: ${(canvas.height - moduloLunar.posicao.y - 0.5 * moduloLunar.altura).toFixed(0)}`,
+        400,
+        60
     );
 }
 
@@ -154,17 +154,10 @@ function desenharModuloLunar(){
     contexto.beginPath();
     contexto.moveTo(moduloLunar.largura * 0.5, moduloLunar.altura * -0.4);
     contexto.lineTo(moduloLunar.largura * -0.5, moduloLunar.altura * -0.4)
-    contexto.lineTo(0, moduloLunar.altura *-1);
+        contexto.lineTo(0, moduloLunar.altura *-1);
     contexto.closePath();
     contexto.fillStyle = 'white';
     contexto.fill();
-    //Base Foguete
-    contexto.beginPath();
-        contexto.rect(moduloLunar.largura * -0.5, moduloLunar.altura * 0.38,
-            moduloLunar.largura * 1, moduloLunar.altura * 0.1);
-        contexto.closePath();
-        contexto.fillStyle = 'red'
-        contexto.fill();
     //janela da nave
     contexto.beginPath();
         contexto.arc(0, moduloLunar.altura * -0.1, moduloLunar.largura *
@@ -172,7 +165,30 @@ function desenharModuloLunar(){
         contexto.closePath();
         contexto.fillStyle = 'lightblue';
         contexto.fill();
-
+    //asa direita
+    contexto.beginPath();
+        contexto.moveTo(moduloLunar.largura * 0.5, moduloLunar.altura * 0.1);
+        contexto.lineTo(moduloLunar.largura * 0.8, moduloLunar.altura * 0.3);
+        contexto.lineTo(moduloLunar.largura * 0.5, moduloLunar.altura * 0.3);
+        contexto.closePath();
+        contexto.fillStyle = 'gray';
+        contexto.fill();
+    //asa esquerda
+    contexto.beginPath();
+        contexto.moveTo(moduloLunar.largura * -0.5, moduloLunar.altura * 0.1);
+        contexto.lineTo(moduloLunar.largura * -0.8, moduloLunar.altura * 0.3);
+        contexto.lineTo(moduloLunar.largura * -0.5, moduloLunar.altura * 0.3);
+        contexto.closePath();
+        contexto.fillStyle = 'gray';
+        contexto.fill();
+    //Base Foguete
+    contexto.beginPath();
+        contexto.rect(moduloLunar.largura * -0.5, moduloLunar.altura * 0.38,
+            moduloLunar.largura * 1, moduloLunar.altura * 0.1);
+        contexto.closePath();
+        contexto.fillStyle = 'red'
+        contexto.fill();
+    
     if(moduloLunar.motorLigado){
         desenharChama();
         consumirCombustivel();
@@ -180,7 +196,6 @@ function desenharModuloLunar(){
     
     contexto.restore();
 }
-
 
 function desenharChama(){
     //desenhar chama
@@ -215,7 +230,7 @@ function desenhar(){
     requestAnimationFrame(desenhar);
 }
 //Controle
-function encerrarjogo(){
+function encerrarjogo(){ //piso da lua
     if(moduloLunar.posicao.y > canvas.height - moduloLunar.altura * 0.5){
         if(moduloLunar.velocidade.y <= 0.5 &&
             Math.abs(moduloLunar.velocidade.x) <= 0.5 &&
